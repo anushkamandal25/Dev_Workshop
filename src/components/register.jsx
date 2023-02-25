@@ -95,7 +95,7 @@ function Register() {
             </h1>
             <p className="modal_right_p">
               We have successfully received your registration for two day
-              Graphic and Motion Design Workshop 2023. we will contact you very
+              Dev Workshop 2023. we will contact you very
               soon.
               <br />
               <br />
@@ -122,7 +122,7 @@ function Register() {
           <>
             <h1 className="gradient__text">Already Submitted !</h1>
             <p className="modal_right_p">
-              You have already registered for two day Graphic and Motion Design
+              You have already registered for two day Dev
               Workshop 2023 account or mobile number. We will contact you very
               soon.
               <br />

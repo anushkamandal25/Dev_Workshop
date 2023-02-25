@@ -47,8 +47,15 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #07192F;
+    /* background: #472183; */
     font-family: 'Inter', sans-serif;
+    background: #43C6AC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #191654, #43C6AC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #191654, #43C6AC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
 }
 
 .heroText{
@@ -128,8 +135,8 @@ button{
 }
 
 .certificate,
-.wdctCorner,
-.interview{
+.project,
+.notes{
     height: 220px;
     object-fit: contain;
 }
@@ -138,26 +145,49 @@ button{
     padding: 1.5rem;
 }
 
-.wdctCorner{
+.project{
     padding: 1.5rem;
 }
 
-.interview{
+.notes{
     padding: 2rem;
 }
 
 @media(max-width: 600px){
     .certificate,
-    .wdctCorner,
-    .interview{
+    .project,
+    .notes{
         max-height: 180px;
         width: 100%;
     }
-    .interview{
+    .notes{
         padding: 1.5rem;
     }
 }
 
+.card-html,
+.card-css,
+.card-bootstrap,
+.card-github,
+.card-javascript{
+    height: 220px;
+    object-fit: contain;
+}
+
+.card-bootstrap{
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.bootstrap{
+    padding-bottom: 20px;
+}
+
+.cards-stack{
+    display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 /* .mentor{
     display: flex;
     justify-content: space-between;
@@ -167,6 +197,8 @@ button{
 .mentorImg{
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25)  ;
     border-radius: 50%;
+    height: 200px;
+    width: 200px;
     /* width: 150px; */
 }
 
@@ -191,6 +223,7 @@ button{
     margin-right: auto;
     margin-top: 15px;
     margin-bottom: 15px;
+    border-radius: 50%;
 }
 
 .footer{
@@ -364,9 +397,9 @@ option::placeholder{
     color: #3b5998;
 }
 
-.fa-behance,
-.fa-behance:hover{
-    color: dodgerblue;
+.fa-github,
+.fa-github:hover{
+    color: rgb(0, 0, 0);
 }
 .fa-instagram,
 .fa-instagram:hover{
@@ -380,3 +413,4 @@ option::placeholder{
 .fa-youtube:hover{
     color: #ff0000;
 }
+

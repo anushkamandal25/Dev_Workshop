@@ -12,6 +12,11 @@ import wdct from './assets/images/wdct1.png';
 import LearnMore from './components/learnMore';
 import Register from "./components/register";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 function App() {
 
   const [show, setShow] = useState(false);
@@ -36,7 +41,7 @@ function App() {
 
           <Offcanvas placement='end' show={show} onHide={handleClose}>
             <Offcanvas.Header className='border-bottom' closeButton>
-              <Offcanvas.Title className='fs-4'><img src={wdct} />Design Workshop</Offcanvas.Title>
+              <Offcanvas.Title className='fs-4'><img src={wdct} />Dev Workshop</Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <div className='navDrop px-2 py-3 fs-5'>
@@ -62,10 +67,11 @@ function App() {
         </Navbar>
 
 
-        <div className='hero'>
-          <div className='heroText'>
-            <h1 textAlign="center" align="center" className='fw-bold'>Design Workshop</h1>
-            <h3 className='my-4'> Learn Adobe Illustrator from scratch in two days</h3>
+        <div className='hero' >
+          <div className='heroText' data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
+            <h1 textAlign="center" align="center" className='fw-bold'>Dev Workshop</h1>
+            <h3 className='my-4'> Code your way to success: Learn Web Development from scratch!</h3>
           </div>
           <div className='d-flex justify-content-center align-items-center'>
             <Button onClick={() => setShowLearn(true)} className={showLearn ? 'hRBtn px-5 py-3 mt-4 mx-2' : 'hBtn px-5 py-3 mt-4 mx-2'} variant="outline-info">Learn More</Button>{' '}
