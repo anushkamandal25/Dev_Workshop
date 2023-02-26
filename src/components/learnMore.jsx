@@ -16,6 +16,9 @@ import arya from "../assets/images/ARYA_SAH.png";
 import ayush from "../assets/images/AYUSH_PRATAP_SINGH.png";
 import rishav from "../assets/images/RISHAV_JHA.png";
 import debjit from "../assets/images/DEBJIT_SHARMA.png";
+import aishika from "../assets/images/AISHIKA_MIDDER.png";
+import tanmay from "../assets/images/TANMAY_MONDAL.png";
+
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -25,6 +28,26 @@ AOS.init();
 
 
 function LearnMore() {
+  const mentors = [
+    {
+      name: "Ayush Pratap Singh ",
+      img: ayush,
+      li: 'https://www.linkedin.com/in/apsingh1843/' ,
+      git: 'https://github.com/apsingh1843',
+    },
+    {
+      name: "Aishika Midder ",
+      img: aishika,
+      li: 'https://www.linkedin.com/in/aishika-midder-05/' ,
+      git: 'https://github.com/aishikamidder05',
+    },
+    {
+      name: "Tanmay Mondal",
+      img: tanmay,
+      li: 'https://www.linkedin.com/in/tanmay-mondal-4180581a7/' ,
+      git: 'https://github.com/10mayje',
+    }
+  ]
   const coordinators = [
     {
       name: "Arya Sah",
@@ -44,11 +67,6 @@ function LearnMore() {
       li: 'https://www.linkedin.com/in/debjit-sharma-7a8471209/',
       git: 'https://github.com/debjitsharma'
     },
-    // {
-    //   name: "Saikat Sarkar",
-    //   img: saikat,
-    //   li: 'https://www.linkedin.com/in/saikat-sarkar-395785205/?originalSubdomain=in'
-    // },
   ];
   return (
     <>
@@ -195,40 +213,44 @@ function LearnMore() {
         </Row>
         </div>
 
-        <div data-aos="zoom-in-up">
-        <div id="mentor" className="description pt-5 pb-5">
-          <h2>Mentor</h2>
+        <div data-aos="zoom-in-down">
+        <div id="coordinator" className="description pt-5 pb-5">
+          <h2>Mentors</h2>
         </div>
-        <Row className="mentor">
-          <Col sm={5} md={6} className="mentor1">
-            <Row>
-              <Col sm={5} md={6}>
-                <img className="mentorImg" src={ayush} />
+        <Row>
+          {mentors.map((mentors) => {
+            return (
+              <Col sm={4}>
+                <Card className="coordinatorCard pb-2">
+                  <Card.Img
+                    variant="top"
+                    className="coordinatorImg"
+                    src={mentors?.img}
+                  />
+                  <Card.Body>
+                    <Card.Title align="center" className="coordinatorName">
+                      {mentors?.name}
+                    </Card.Title>
+                    <Card.Text align="center">
+                     {mentors?.name == "Ayush Pratap Singh " ? "Head" : "Executive Member"}
+                      <br />
+                      WDCT,CCA
+                    </Card.Text>
+                    <Card.Title align="center">
+                      <h4>
+                        {
+                          <a href={mentors?.li} class="fa-brands mx-1 fa-linkedin" target="_blank" rel="noopener noreferrer" />
+                        }
+                        {
+                          <a href={mentors?.git} class="fa-brands mx-1 fa-github" target="_blank" rel="noopener noreferrer" />
+                        }
+                      </h4>
+                    </Card.Title>
+                  </Card.Body>
+                </Card>
               </Col>
-              <Col md={6} className="mentorTxt">
-                <h3 className="pt-2 pb-2">Ayush Pratap Singh</h3>
-                <h4 className="pb-2">Head, WDCT,CCA</h4>
-                <h3 className="mentorLinks">
-                  <a href="https://www.linkedin.com/in/apsingh1843/" target="_blank" rel="noopener noreferrer" class="fa-brands me-1 fa-linkedin" />{" "}
-                  <a href="https://github.com/apsingh1843" target="_blank" rel="noopener noreferrer" class="fa-brands ms-1 fa-github" />{" "}
-                </h3>
-              </Col>
-            </Row>
-          </Col>
-
-          <Col sm={7} md={6} className="mentor2">
-            <p className="pt-2">
-              Every firm has stories to tell—stories that will not only engage,
-              inform, surprise, delight, and impact their audience, but that
-              will also deliver on measurable goals. And I am the conduit
-              between the firm and consumer.
-            </p>
-            <p>
-              I help clients find the subject and medium that best fits their
-              unique identity, and then I produce high-quality content that
-              meets their objectives.
-            </p>
-          </Col>
+            );
+          })}
         </Row>
         </div>
 
@@ -258,10 +280,10 @@ function LearnMore() {
                     <Card.Title align="center">
                       <h4>
                         {
-                          coordinator?.li && <a href={""} class="fa-brands mx-1 fa-linkedin" target="_blank" rel="noopener noreferrer" />
+                          <a href={coordinator?.li} class="fa-brands mx-1 fa-linkedin" target="_blank" rel="noopener noreferrer" />
                         }
                         {
-                          coordinator?.git && <a href={""} class="fa-brands mx-1 fa-github" target="_blank" rel="noopener noreferrer" />
+                          <a href={coordinator?.git} class="fa-brands mx-1 fa-github" target="_blank" rel="noopener noreferrer" />
                         }
                       </h4>
                     </Card.Title>
